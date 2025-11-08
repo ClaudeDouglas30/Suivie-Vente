@@ -99,36 +99,6 @@ Détails de la page :
 
 Comment interpréter : rechercher corrélations entre pics d'annulation et périodes/produits spécifiques ; ceci informe retours produit, logistique ou support client.
 
-Fichiers image inclus
 
-- `titre_filtre_kpi.png` — aperçu du bandeau (titre, filtres, KPI).
-- `evolution_ca_volumes.png` — courbe CA & volumes.
-- `chiffre_affaire_par_region_categorie.png` — carte/répartition CA par région & catégorie.
-- `page_ventes.png` — capture d'ensemble de la page principale.
-- `page_commandes_annulees.png` — capture d'ensemble de la page annulations.
-
-Mesures DAX (exemples clés)
-
-- Total ventes = SUM(Ventes[Prix total])
-- Nombre de commandes = DISTINCTCOUNT(Ventes[Id commande])
-- Quantité vendue = SUM(Ventes[Quantité])
-- Commande moyenne = DIVIDE([Total ventes],[Nombre de commandes])
-- Total commandes annulées = CALCULATE(COUNT(Ventes[Id commande]), Ventes[Statut commande] = "Cancelled")
-- Montant commandes annulées = CALCULATE(SUM(Ventes[Prix total]), Ventes[Statut commande] = "Cancelled")
-- Pourcentage commandes annulées = DIVIDE([Total commandes annulées],[Nombre de commandes])
-
-Bonnes pratiques et contrôles qualité
-
-- Documenter chaque transformation Power Query (nommer les étapes) pour faciliter la reproductibilité.
-- Vérifier l'absence de valeurs dupliquées sur les identifiants après regroupement.
-- Tester les mesures DAX sur échantillons pour vérifier la logique avant déploiement sur l'ensemble des données.
-
-Prochaines actions possibles
-
-- Générer un thème JSON (Loomy Lime) à importer dans Power BI pour appliquer la charte visuelle.
-- Produire un mini-guide illustré avec étapes Power Query et captures annotées.
-- Exporter un script PowerShell `rename_images.ps1` si vous voulez réutiliser le renommage des images sur d'autres dossiers.
-
----
-
-Faites-moi savoir si vous souhaitez que je déploie l'une des actions ci‑dessus (génération de thème, mini-guide ou script de renommage). 
+video de demonstration :
+[video demo](video_demo.mp4)
